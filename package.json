@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/vscode-copy-file-line.git"
+    "url": "https://github.com/HamsterCat-W-2/vscode-copy-file-line.git"
   },
   "engines": {
     "vscode": "^1.74.0"
