@@ -1,0 +1,63 @@
+{
+  "name": "vscode-copy-file-line",
+  "displayName": "Copy File Line",
+  "description": "Copy selected code with file path and line numbers",
+  "version": "0.0.1",
+  "publisher": "lymticans",
+  "author": "@lymticans",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/vscode-copy-file-line.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "copy",
+    "file",
+    "line",
+    "location",
+    "path"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copyFileLine.copyWithLocation",
+        "title": "Copy with File Location"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "copyFileLine.copyWithLocation",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c",
+        "when": "editorHasSelection"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "copyFileLine.copyWithLocation",
+          "group": "9_cutcopypaste"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
